@@ -28,7 +28,6 @@ export function Museums(){
               
               museumsCopy.push(newMuseum);
               setMuseums(museumsCopy)
-
               event.target.reset();
             }}>
         <div>
@@ -53,11 +52,20 @@ export function Museums(){
   }}> POST</button>
       </form>
       {
-            museums.map(museum => (
+            museums.reverse().map(museum => (
               <div className="museums" >
                   <h3>{museum.name}</h3>
                   <p>{museum.type}</p>
                   <p>{museum.location}</p>
+                  <button onClick={()=>{
+                      fetch(`http://localhost:4500/museums/${museum.id}`,{
+                        method:"DELETE"
+                      }).then((resp) => resp.json())
+                      .then(() =>
+                    location.reload()
+                      )
+                  
+                    }}> X </button>
               </div>
               
             ))}
