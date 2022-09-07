@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.museums{
+  margin:30px 400px;
+  border: thin solid gainsboro;
+}
+.museums:hover{
+  background-color: rgba(220, 220, 220, 0.273);
+}
+.works{
+  margin:30px 400px;
+  width: 600px;
+  border: thin solid gainsboro;
+  padding: 20px;
+}
