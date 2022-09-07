@@ -4,6 +4,8 @@
 .museums{
   margin:30px 400px;
   border: thin solid gainsboro;
+  width: 500px;
+  background-color: transparent;
 }
 .museums:hover{
   background-color: rgba(220, 220, 220, 0.273);

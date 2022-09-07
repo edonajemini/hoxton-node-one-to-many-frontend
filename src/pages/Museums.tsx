@@ -31,7 +31,7 @@ export function Museums(){
 
               event.target.reset();
             }}>
-        <div className='name-lastname'>
+        <div>
         <input id='name' name='name' type='text' placeholder="Name?" required></input>
         <input id='type' name='type' type='text' placeholder="Type?" required></input>
         </div>
@@ -52,13 +52,14 @@ export function Museums(){
     .then(museumsfromserver => setMuseums([...museums, museumsfromserver]))
   }}> POST</button>
       </form>
-             {
+      {
             museums.map(museum => (
-              <div className="museums">
+              <div className="museums" >
                   <h3>{museum.name}</h3>
                   <p>{museum.type}</p>
                   <p>{museum.location}</p>
               </div>
+              
             ))}
         </div>
     )
